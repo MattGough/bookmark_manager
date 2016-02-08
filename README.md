@@ -26,8 +26,3 @@ Domain Model
 ------------
 
 ![Domain](http://i.imgur.com/qrKloNF.png)
-
-
-User ----->list
-User--->list--->sort--->list sorted
-User --->
