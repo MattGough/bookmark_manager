@@ -1,3 +1,4 @@
+ENV['DATABASE_URL'] = 'https://bookmark-manager-goughfinn.herokuapp.com'
 ENV["RACK_ENV"] ||= "development"
 
 require 'sinatra/base'
