@@ -1,9 +1,8 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-<<<<<<< HEAD
 # gem "rails"
-=======
+
 ruby '2.2.1'
 
 gem 'data_mapper'
@@ -22,4 +21,4 @@ group :test do
 gem 'rspec-sinatra'
 gem 'capybara'
 end
->>>>>>> day-four
+
