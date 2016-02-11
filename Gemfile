@@ -3,7 +3,6 @@ source "https://rubygems.org"
 
 ruby '2.2.1'
 
-group :test do
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'rspec-sinatra'
@@ -14,4 +13,9 @@ gem 'shotgun'
 gem 'dm-transactions'
 gem 'database_cleaner'
 gem 'rspec'
+
+
+group :test do
+gem 'rspec-sinatra'
+gem 'capybara'
 end
