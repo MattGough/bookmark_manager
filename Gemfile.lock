@@ -82,8 +82,21 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.2)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
     rspec-sinatra (0.1.2)
       templater (>= 1.0.0)
+    rspec-support (3.4.1)
     rubyzip (1.1.7)
     selenium-webdriver (2.51.0)
       childprocess (~> 0.5)
@@ -116,6 +129,7 @@ DEPENDENCIES
   database_cleaner
   dm-postgres-adapter
   dm-transactions
+  rspec
   rspec-sinatra
   selenium-webdriver
   shotgun

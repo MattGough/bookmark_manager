@@ -13,4 +13,5 @@ gem 'selenium-webdriver'
 gem 'shotgun'
 gem 'dm-transactions'
 gem 'database_cleaner'
+gem 'rspec'
 end
