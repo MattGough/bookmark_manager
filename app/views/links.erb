@@ -1,5 +1,11 @@
 <h1> Links </h1>
 <a href="/links/new">Add Bookmark</a>
+<form method='post' action='/tags/bubbles'>
+  <label> Filter by tag:
+    <input type='text' name='filter_tag'></label>
+    <input type='submit' value='Submit'>
+</form>
+
 <ul id='links'>
   <% @links.each do |link| %>
   <li>

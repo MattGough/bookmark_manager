@@ -39,3 +39,29 @@ feature 'creating links' do
      expect(link.tags.map{ |obj| obj.name}).to include 'news'
    end
  end
+
+#  As a time-pressed user
+# So that I can quickly find links on a particular topic
+# I would like to filter links by tag
+
+feature 'filtering tags' do
+
+  before(:each) do
+   Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy', tags: [Tag.first_or_create(name: 'education')])
+   Link.create(url: 'http://www.google.co.uk', title: 'Google', tags: [Tag.first_or_create(name: 'search')])
+   Link.create(url: 'http://www.amazon.co.uk', title: 'Amazon', tags: [Tag.first_or_create(name: 'bubbles')])
+   Link.create(url: 'http://www.facebook.com', title: 'Facebook', tags: [Tag.first_or_create(name: 'bubbles')])
+ end
+
+  scenario 'filter links by tag' do
+    visit('/tags/bubbles')
+
+    expect(page.status_code).to eq(200)
+    within 'ul#links' do
+     expect(page).not_to have_content('Makers Academy')
+     expect(page).not_to have_content('Google')
+     expect(page).to have_content('Amazon')
+     expect(page).to have_content('Facebook')
+    end
+  end
+end
